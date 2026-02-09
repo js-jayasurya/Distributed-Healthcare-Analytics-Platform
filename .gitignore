@@ -1,0 +1,57 @@
+# --- Java & Maven ---
+target/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# --- IDEs (IntelliJ, VS Code, Eclipse) ---
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# --- Logs & Temp ---
+*.log
+logs/
+temp/
+tmp/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Docker ---
+.docker/
+# Only ignore .env if it contains real secrets (recommended)
+.env
+
+# --- AWS & LocalStack ---
+.aws/
+.localstack/
+cloudformation-out/
+
+# --- Spring Boot specific ---
+bin/
+out/
+.mvn/wrapper/maven-wrapper.jar
+
+# --- gRPC / Protobuf generated code ---
+# Usually, you don't commit generated code as it's built from .proto files
+# Uncomment the line below if you want to keep your repo clean
+**/src/main/java/com/yourpackage/generated/
+
+
+# Ignore the actual configuration files containing secrets
+application.properties
+application.yml
+application-prod.properties
+
+# Ignore local environment files
+.env
+.env.local
