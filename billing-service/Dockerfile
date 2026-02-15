@@ -11,9 +11,10 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21-jre-jammy AS runner
 WORKDIR /app
 
-# FIX: Removed the extra "./app" from the source path. 
+# FIX: Removed the extra "./app" from the source path.
 # Also using a wildcard (*) to handle version changes automatically.
-COPY --from=builder /app/target/patient-service-*.jar ./app.jar
+COPY --from=builder /app/target/billing-service-*.jar ./app.jar
 
-EXPOSE 4000
+EXPOSE 4001
+EXPOSE 9001
 ENTRYPOINT ["java", "-jar", "app.jar"]
